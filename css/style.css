@@ -6,6 +6,30 @@
     font-size: 62.5%;
 }
 
+.container {
+    max-width: 1200px;
+    /* Ограничивает максимальную ширину */
+    margin-left: auto;
+    /* Выравнивает блок по горизонтали по центру */
+    margin-right: auto;
+    /* Выравнивает блок по горизонтали по центру */
+    padding-left: 10px;
+    /* Отступ слева, чтобы контент не прижимался к краям экрана */
+    padding-right: 10px;
+    /* Отступ справа, чтобы контент не прижимался к краям экрана */
+}
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
 .playfair {
     font-family: 'Playfair Display', serif;
 }
