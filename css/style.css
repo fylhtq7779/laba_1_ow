@@ -10,6 +10,10 @@
     font-family: 'Playfair Display', serif;
 }
 
+.no-underline {
+    text-decoration: none;
+}
+
 .heading-font {
     color: var(--text-color);
     font-size: 2rem;
