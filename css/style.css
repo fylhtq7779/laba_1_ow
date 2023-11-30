@@ -10,6 +10,21 @@
     color: inherit;
 }
 
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px; /* Отступ между элементами списка */
+}
+
 .NinjaLogo {
     display: flex;
     align-items: center;
@@ -39,6 +54,434 @@
 }
 
 .logoLink>img {
-    margin-left: -20px;
+    margin-left: -27px;
     max-width: 150px;
+}
+
+.mainHero {
+    display: flex;
+    flex-direction: column;
+}
+
+.Hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: center;
+    margin-left: 9px;
+}
+
+.Hero>h2 {
+    font-family: Playfair Display;
+    font-size: 2.2rem;
+}
+
+.Hero>p {
+    font-family: Raleway;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.heroimg>img {
+    max-width: 301px;
+}
+
+.heroButton {
+    display: flex;
+    font-family: Raleway;
+    font-weight: 900;
+    font-size: 1.3rem;
+    align-items: center;
+}
+
+.heroButtonRight {
+    margin-left: auto;
+    color: #4BA87D;
+    border-style: solid;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-width: 3px;
+    margin-left: 14px;
+}
+
+.heroButtonLeft {
+    color: #FFF;
+    background-color: #4BA87D;
+    padding: 13px;
+    padding-left: 39px;
+    padding-right: 39px;
+}
+
+.video {
+    margin: 9px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.video>img {
+    max-width: 304px;
+}
+
+.videoH1 {
+    position: absolute;
+    top: 64px;
+    font-family: Playfair Display;
+    font-weight: 900;
+    font-size: 2.2rem;
+    color: #FFF;
+}
+
+.videoH2 {
+    position: absolute;
+    top: 120px;
+    color: #4BA87D;
+    font-family: Raleway;
+    font-size: 0.6rem;
+    font-weight: 900;
+    background-color: #FFF;
+    padding: 6px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+.customers_one {
+    margin-top: 17px;
+    margin-left: 9px;
+    display: flex;
+    flex-direction: column;
+    width: 209px;
+    height: 294px;
+
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .1);
+
+}
+
+.customers_one>p {
+    color: #000;
+    font-family: Raleway;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 500;
+
+    padding-top: 17px;
+    padding-left: 20px;
+    padding-right: 25px;
+    padding-bottom: 15px;
+}
+
+.customers_one>a {
+    color: #4BA87D;
+    font-family: Raleway;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 800;
+    padding-left: 20px;
+    padding-right: 25px;
+    padding-bottom: 13px;
+}
+
+.customers_one>img{
+   max-width: 100%;
+}
+
+
+.customers_two {
+    margin-top: 17px;
+    margin-left: auto;
+    padding-right: 9px;
+    display: flex;
+    flex-direction: column;
+    width: 209px;
+    height: 294px;
+
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .1);
+
+}
+
+.customers_two>p {
+    color: #000;
+    font-family: Raleway;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 500;
+
+    padding-top: 17px;
+    padding-left: 20px;
+    padding-right: 25px;
+    padding-bottom: 15px;
+}
+
+.customers_two>a {
+    color: #4BA87D;
+    font-family: Raleway;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 800;
+    padding-left: 20px;
+    padding-right: 25px;
+    padding-bottom: 13px;
+}
+
+.customers_two>img{
+   max-width: 100%;
+}
+
+.customers_p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    margin: 38.6px;
+    padding-left: 14.5px;
+    padding-right: 12.9px;
+}
+
+.customers_p_one {
+    color: #000;
+    font-family: Playfair Display;
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 900;
+}
+
+.customers_p_two {
+    color: #000;
+    font-family: Raleway;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.examples {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.image-wrapper {
+    position: relative;
+    max-width: 223px;
+}
+
+.image-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(0deg, #000 -32.5%, rgba(84, 84, 84, 0.00) 67.78%);
+}
+
+.image-wrapper>img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.examples_one {
+    position: relative;
+    margin-bottom: 21px;
+}
+
+.examples_two {
+    position: relative;
+    margin-bottom: 21px;
+}
+
+.examples_there {
+    position: relative;
+    margin-bottom: 59px;
+}
+
+
+.examples_name {
+    position: absolute;
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 2.2rem;
+    font-style: normal;
+    font-weight: 900;
+    top: 90px;
+    left: 17px;
+    margin-top: 1px;
+}
+
+.examples_since {
+    position: absolute;
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 700;
+    top: 120px;
+    left: 17px;
+}
+
+.form {
+    width: 223px;
+    height: 25px;
+    border-radius: 3px;
+    margin-bottom: 6px;
+}
+
+.mainForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainForm form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainForm p {
+    text-align: center;
+    width: 100%; /* Это гарантирует, что текст будет центрирован вне зависимости от ширины этих элементов */
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.mainForm input,
+.mainForm button {
+    text-align: center; /* Центрирует текст внутри input и button */
+    margin: 10px 0; /* Добавляет отступ сверху и снизу элементов */
+}
+
+
+.mainForm label {
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-family: Playfair Display;
+    font-size: 2.6rem;
+    font-style: normal;
+    font-weight: 900;
+}
+
+.mainForm p {
+    color: #4BA87D;
+    font-family: Raleway;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.mainForm button {
+    background-color: #4BA87D;
+    color: #FFF;
+    padding: 13px;
+    padding-left: 21px;
+    padding-right: 21px;
+    border-style: none;
+    font-weight: 900;
+    font-size: 1.3rem;
+    font-family: Raleway;
+}
+
+.mainBrand h2 {
+    color: #000;
+    text-align: center;
+    font-family: Playfair Display;
+    font-size: 2.6rem;
+    font-style: normal;
+    font-weight: 900;
+}
+
+
+.brend_logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.brend_logo_pad {
+    padding: 10px;
+}
+
+.getstart {
+    background-color: #4BA87D;
+    width: 320px;
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.getstart h2 {
+    color: #FFF;
+    text-align: center;
+    font-family: Playfair Display;
+    font-size: 4.2rem;
+    font-style: normal;
+    font-weight: 900;
+}
+
+.getstart a {
+    color: #4BA87D;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 900;
+    background-color: #FFF;
+    padding: 13px;
+    padding-left: 23px;
+    padding-right: 23px;
+}
+
+.logo_foot {
+    display: flex;
+    align-items: center;
+
+
+}
+
+.logo_foot p {
+    color: #000;
+    font-family: Raleway;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 900;
+    margin-left: -10px;
+    margin-top: 12px;
+}
+
+.logoLink_foot img{
+    max-width: 60px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px; /* Расстояние между колонками */
+    margin-left: 8px;
+    color: #000;
+    font-family: Raleway;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+.foot_end {
+    color: #000;
+    font-family: Raleway;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 700;
+    margin-left: 8px;
+}
+
+.foot_end ul {
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
