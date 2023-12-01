@@ -25,12 +25,24 @@ li {
     margin-bottom: 10px; /* Отступ между элементами списка */
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  
+
 .NinjaLogo {
     display: flex;
     align-items: center;
 }
 
-.NinjaLogo>h1 {
+.NinjaLogo>p {
     margin-left: -33px;
     margin-bottom: 22px;
     font-family: Raleway;
