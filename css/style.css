@@ -41,6 +41,11 @@ li {
 .NinjaLogo {
     display: flex;
     align-items: center;
+    margin-top: 3px;
+}
+
+.backtest {
+    background-image: url(BG_stuff.png);
 }
 
 .NinjaLogo>p {
@@ -162,16 +167,27 @@ li {
     padding-right: 13px;
 }
 
-.customers_one {
-    margin-top: 17px;
-    margin-left: 9px;
+.customers {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+.mergin-center {
+
+}
+
+.customers_one {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    position: relative;
+    right: 46.5px;
     width: 209px;
     height: 294px;
-
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .1);
-
 }
 
 .customers_one>p {
@@ -180,7 +196,6 @@ li {
     font-size: 1.2rem;
     font-style: normal;
     font-weight: 500;
-
     padding-top: 17px;
     padding-left: 20px;
     padding-right: 25px;
@@ -204,14 +219,14 @@ li {
 
 
 .customers_two {
-    margin-top: 17px;
-    margin-left: auto;
     padding-right: 9px;
     display: flex;
     flex-direction: column;
+    position: relative;
+    margin: 0 auto;
     width: 209px;
     height: 294px;
-
+    left: 46.5px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .1);
 
 }
@@ -427,7 +442,6 @@ li {
 
 .getstart {
     background-color: #4BA87D;
-    width: 320px;
     height: 290px;
     display: flex;
     flex-direction: column;
@@ -479,9 +493,7 @@ li {
 }
 
 .footer {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 20px; /* Расстояние между колонками */
+    width: 320px;
     margin-left: 8px;
     color: #000;
     font-family: Raleway;
@@ -489,6 +501,16 @@ li {
     font-style: normal;
     font-weight: 700;
   }
+
+.footer ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer li {
+    flex: 1 1 50%;
+    margin-bottom: 10px;
+}
 
 .foot_end {
     color: #000;
