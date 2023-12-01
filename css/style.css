@@ -26,16 +26,16 @@ li {
 }
 
 .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-  }
-  
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 
 .NinjaLogo {
     display: flex;
@@ -43,8 +43,8 @@ li {
 }
 
 .NinjaLogo>p {
-    margin-left: -33px;
-    margin-bottom: 22px;
+    margin-left: -16px;
+    margin-bottom: 29px;
     font-family: Raleway;
     font-size: 2.2rem;
     font-weight: 900;
@@ -66,7 +66,7 @@ li {
 }
 
 .logoLink>img {
-    margin-left: -27px;
+    margin-left: 5px;
     max-width: 150px;
 }
 
@@ -97,6 +97,7 @@ li {
 
 .heroimg>img {
     max-width: 301px;
+    margin-right: 10px;
 }
 
 .heroButton {
@@ -278,6 +279,10 @@ li {
 .image-wrapper {
     position: relative;
     max-width: 223px;
+}
+
+.shadow-image {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .1);
 }
 
 .image-wrapper::after {
