@@ -164,17 +164,23 @@ li {
     padding-right: 13px;
 }
 
+.backtest {
+    background-image: url(back.svg);
+    background-repeat: no-repeat;
+    z-index: -1;
+    background-position: center 250px;
+    background-size: 100% 800px;
+}
+
 .customers {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.mergin-center {
-
-}
 
 .customers_one {
+    background-color: #FFF;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -183,7 +189,6 @@ li {
     position: relative;
     right: 46.5px;
     width: 209px;
-    height: 294px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .1);
 }
 
@@ -212,17 +217,17 @@ li {
 
 .customers_one>img{
    max-width: 100%;
+   object-fit: fill;
 }
 
 
 .customers_two {
-    padding-right: 9px;
+    background-color: #FFF;
     display: flex;
     flex-direction: column;
     position: relative;
     margin: 0 auto;
     width: 209px;
-    height: 294px;
     left: 46.5px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .1);
 
@@ -254,6 +259,7 @@ li {
 
 .customers_two>img{
    max-width: 100%;
+   object-fit: fill;
 }
 
 .customers_p {
