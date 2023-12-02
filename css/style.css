@@ -423,6 +423,14 @@ li {
     font-family: Raleway;
 }
 
+.thanks-message {
+    display: none;
+}
+
+input:valid + button + .thanks-message {
+    display: block;
+}
+
 .mainBrand h2 {
     color: #000;
     text-align: center;
