@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css\style.css">
+    <link rel="stylesheet" type="text/css" href="css\style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Raleway:wght@500;900&display=swap"
+        rel="stylesheet">
+    <title>Sign Up</title>
+</head>
+
+<body>
+
+    <form action="https://httpbin.org/post" method="POST" class="form-modern">
+        <div class="form-group">
+            <label for="name" class="form-label">Имя:</label>
+            <input type="text" name="name" id="name" class="form-input" placeholder="Введите ваше имя" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="birthdate" class="form-label">Дата рождения:</label>
+            <input type="date" name="birthdate" id="birthdate" class="form-input" required>
+        </div>
+        
+        <div class="gender-selection form-group">
+            <label class="form-label">Пол:</label>
+            <div class="gender-options">
+                <input type="radio" name="gender" value="male" id="male" class="form-radio" required>
+                <label for="male" class="form-option-label">Мужчина</label>
+                <input type="radio" name="gender" value="female" id="female" class="form-radio" required>
+                <label for="female" class="form-option-label">Женщина</label>
+                <input type="radio" name="gender" value="other" id="other" class="form-radio" required>
+                <label for="other" class="form-option-label">Другое</label>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="password" class="form-label">Пароль:</label>
+            <input type="password" name="password" id="password" class="form-input" placeholder="Введите пароль" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" name="email" id="email" class="form-input" placeholder="Введите ваш email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="phone" class="form-label">Телефон:</label>
+            <input type="tel" name="phone" id="phone" class="form-input" placeholder="Введите ваш телефон" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="contact-time" class="form-label">Удобный интервал для связи:</label>
+            <select name="contact-time" id="contact-time" class="form-input" required>
+                <option value="morning">Утро</option>
+                <option value="day">День</option>
+                <option value="evening">Вечер</option>
+                <option value="night">Ночь</option>
+            </select>
+        </div>
+    
+        <button type="submit" class="form-button">ПРИСОЕДИНИТЬСЯ К НАШЕМУ СПИСКУ</button>
+    </form>
+    
+
+
+</body>
+
+</html>
