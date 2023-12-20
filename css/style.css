@@ -5,6 +5,7 @@
     font-family: 'Raleway', sans-serif;
     font-size: 62.5%;
 }
+
 * {
     text-decoration: none;
     color: inherit;
@@ -13,28 +14,33 @@
 
 html {
     box-sizing: border-box;
-  }
-  *, *:before, *:after {
+}
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
-  }
+}
+
 ul {
     list-style: none;
     padding: 0;
 }
 
 li {
-    margin-bottom: 10px; /* Отступ между элементами списка */
+    margin-bottom: 10px;
+    /* Отступ между элементами списка */
 }
 
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
 
@@ -42,6 +48,7 @@ li {
     display: flex;
     align-items: center;
     margin-top: 3px;
+    justify-content: space-between;
 }
 
 
@@ -54,9 +61,17 @@ li {
     color: black;
 }
 
+.LogoHe {
+    display: flex;
+    font-family: Raleway;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: black;
+}
+
 .linkSign {
-    margin-left: auto;
-    padding-right: 13px;
+    margin-right: 10px;
+    margin-left: 16px;
 }
 
 .linkSign>a {
@@ -71,6 +86,39 @@ li {
 .logoLink>img {
     margin-left: 5px;
     max-width: 150px;
+}
+
+.logoLink {
+    display: flex;
+}
+
+.tablTxt {
+    margin-left: 26px;
+}
+
+.underline {
+    position: relative;
+    /* Обязательно, так как мы будем использовать абсолютное позиционирование для псевдоэлемента */
+    display: inline;
+    /* Подчёркиваем только текст, а не всю линию блока */
+    padding: 0 5px;
+    /* Добавляем паддинги для увеличения длины линии */
+}
+
+/* Псевдоэлемент для создания подчеркивания */
+.underline::after {
+    content: '';
+    /* Псевдоэлементы требуют свойства content */
+    position: absolute;
+    /* Абсолютное позиционирование относительно родителя */
+    left: 0;
+    /* Выравниваем слева */
+    right: 0;
+    /* Выравниваем справа */
+    bottom: -3px;
+    /* Отступ от текста составит 3px */
+    border-bottom: 3px solid green;
+    /* Зелёная линия внизу */
 }
 
 .mainHero {
@@ -215,9 +263,9 @@ li {
     padding-bottom: 13px;
 }
 
-.customers_one>img{
-   max-width: 100%;
-   object-fit: fill;
+.customers_one>img {
+    max-width: 100%;
+    object-fit: fill;
 }
 
 
@@ -257,9 +305,9 @@ li {
     padding-bottom: 13px;
 }
 
-.customers_two>img{
-   max-width: 100%;
-   object-fit: fill;
+.customers_two>img {
+    max-width: 100%;
+    object-fit: fill;
 }
 
 .customers_p {
@@ -381,15 +429,18 @@ li {
 
 .mainForm p {
     text-align: center;
-    width: 100%; /* Это гарантирует, что текст будет центрирован вне зависимости от ширины этих элементов */
+    width: 100%;
+    /* Это гарантирует, что текст будет центрирован вне зависимости от ширины этих элементов */
     margin-top: 6px;
     margin-bottom: 6px;
 }
 
 .mainForm input,
 .mainForm button {
-    text-align: center; /* Центрирует текст внутри input и button */
-    margin: 10px 0; /* Добавляет отступ сверху и снизу элементов */
+    text-align: center;
+    /* Центрирует текст внутри input и button */
+    margin: 10px 0;
+    /* Добавляет отступ сверху и снизу элементов */
 }
 
 
@@ -427,7 +478,7 @@ li {
     display: none;
 }
 
-input:valid + button + .thanks-message {
+input:valid+button+.thanks-message {
     display: block;
 }
 
@@ -499,7 +550,7 @@ input:valid + button + .thanks-message {
     margin-top: 12px;
 }
 
-.logoLink_foot img{
+.logoLink_foot img {
     max-width: 60px;
 }
 
@@ -511,7 +562,7 @@ input:valid + button + .thanks-message {
     font-size: 1.2rem;
     font-style: normal;
     font-weight: 700;
-  }
+}
 
 .footer ul {
     display: flex;
@@ -539,164 +590,255 @@ input:valid + button + .thanks-message {
 
 
 .form-modern {
-  font-family: 'Raleway', sans-serif;
-  background-color: #f8f8f8;
-  max-width: 30rem; /* Использование rem для размеров */
-  margin: 2.5rem auto;
-  padding: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    font-family: 'Raleway', sans-serif;
+    background-color: #f8f8f8;
+    max-width: 30rem;
+    /* Использование rem для размеров */
+    margin: 2.5rem auto;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .form-group {
-  margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .form-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  color: #555;
-  font-size: 1rem;
-  font-weight: 700; /* Bold для лейблов */
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-size: 1rem;
+    font-weight: 700;
+    /* Bold для лейблов */
 }
 
 .form-input,
 .form-button {
-  width: 100%;
-  padding: 0.75rem;
-  border-radius: 0.25rem;
-  border: 1px solid #ddd;
-  font-size: 0.875rem;
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ddd;
+    font-size: 0.875rem;
 }
 
 .form-input {
-  background-color: #fff;
+    background-color: #fff;
 }
 
 /* Стиль кнопки отправки формы */
 .form-button {
-  background-color: #007bff;
-  color: white;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 /* Эффект наведения на кнопку */
 .form-button:hover {
-  background-color: #0056b3;
+    background-color: #0056b3;
 }
 
 /* Стилизация блока выбора пола с увеличенными размерами */
 .gender-selection {
-  font-size: 1rem; /* Увеличенный размер шрифта для пола */
+    font-size: 1rem;
+    /* Увеличенный размер шрифта для пола */
 }
 
 .gender-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem; /* Пространство между элементами */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    /* Пространство между элементами */
 }
 
-.form-radio + .form-option-label {
-  display: inline-block;
-  cursor: pointer;
+.form-radio+.form-option-label {
+    display: inline-block;
+    cursor: pointer;
 }
 
 .form-radio {
-  margin-right: 0.25rem;
+    margin-right: 0.25rem;
 }
 
 /* Эффект фокуса на вводе данных */
 .form-input:focus {
-  border-color: #66afe9;
-  outline: none;
+    border-color: #66afe9;
+    outline: none;
 }
 
 .form-button:focus {
-  outline: none;
+    outline: none;
 }
 
 
 .form-modern {
-  font-family: 'Raleway', sans-serif;
-  background-color: #ffffff; /* Используем белый цвет для фона */
-  max-width: 40rem; /* Увеличенный максимальный размер */
-  margin: 4rem auto; /* Увеличенный отступ сверху и снизу */
-  padding: 3rem; /* Увеличенные отступы внутри */
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: 'Raleway', sans-serif;
+    background-color: #ffffff;
+    /* Используем белый цвет для фона */
+    max-width: 40rem;
+    /* Увеличенный максимальный размер */
+    margin: 4rem auto;
+    /* Увеличенный отступ сверху и снизу */
+    padding: 3rem;
+    /* Увеличенные отступы внутри */
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
-  margin-bottom: 2rem; /* Увеличенный нижний отступ */
+    margin-bottom: 2rem;
+    /* Увеличенный нижний отступ */
 }
 
 .form-label {
-  display: block;
-  margin-bottom: 0.75rem; /* Увеличенный нижний отступ для меток */
-  color: #4BA87D; /* Цвет заголовков */
-  font-size: 1.25rem; /* Увеличенный размер шрифта */
-  font-weight: 700;
+    display: block;
+    margin-bottom: 0.75rem;
+    /* Увеличенный нижний отступ для меток */
+    color: #4BA87D;
+    /* Цвет заголовков */
+    font-size: 1.25rem;
+    /* Увеличенный размер шрифта */
+    font-weight: 700;
 }
 
 .form-input,
 .form-button {
-  width: 100%;
-  padding: 1rem; /* Увеличенный паддинг */
-  border-radius: 0.5rem; /* Увеличенный радиус границы */
-  border: 1px solid #ccc;
-  font-size: 1rem; /* Увеличенный размер шрифта */
+    width: 100%;
+    padding: 1rem;
+    /* Увеличенный паддинг */
+    border-radius: 0.5rem;
+    /* Увеличенный радиус границы */
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    /* Увеличенный размер шрифта */
 }
 
 .form-input {
-  background-color: #fff;
+    background-color: #fff;
 }
 
 /* Стиль кнопки отправки формы */
 .form-button {
-  background-color: #4BA87D; /* Основной зеленый цвет */
-  color: white;
-  font-weight: 700;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    background-color: #4BA87D;
+    /* Основной зеленый цвет */
+    color: white;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 /* Эффект наведения на кнопку */
 .form-button:hover {
-  background-color: #3b8d6a; /* Темно-зеленый цвет при наведении */
+    background-color: #3b8d6a;
+    /* Темно-зеленый цвет при наведении */
 }
 
 /* Стилизация блока выбора пола */
 .gender-selection {
-  font-size: 1.25rem;
+    font-size: 1.25rem;
 }
 
 .gender-options {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem; /* Пространство между элементами */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    /* Пространство между элементами */
 }
 
-.form-radio + .form-option-label {
-  display: inline-block;
-  cursor: pointer;
-  font-size: 1rem; /* Увеличенный размер шрифта для лейблов */
+.form-radio+.form-option-label {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1rem;
+    /* Увеличенный размер шрифта для лейблов */
 }
 
 .form-radio {
-  margin-right: 0.3rem;
-  cursor: pointer;
+    margin-right: 0.3rem;
+    cursor: pointer;
 }
 
 /* Эффект фокуса на вводе данных */
 .form-input:focus {
-  border-color: #4BA87D;
-  outline: none;
+    border-color: #4BA87D;
+    outline: none;
 }
 
 .form-button:focus {
-  outline: none;
+    outline: none;
+}
+
+.mobileHide {
+    display: none;
+}
+
+
+
+
+@media (min-width: 768px) {
+    body {
+        background-color: lightblue;
+    }
+
+    .mobileHide {
+        display: inline;
+    }
+
+    .tableHide {
+        display: none;
+    }
+
+    .tabletHead {
+        display: inline;
+        font-weight: 800;
+        font-size: 1.1rem;
+        margin-left: auto;
+    }
+
+    .mainHero {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .Hero {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 25px;
+        max-width: 315px;
+    }
+
+    .Hero h2 {
+        color: #000;
+        font-family: Playfair Display;
+        font-size: 3.8rem;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 46px;
+    }
+
+    .Hero p {
+        color: #000;
+        font-family: Raleway;
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px;
+    }
+
+    .heroimg {
+        order: 1;
+    }
+
+    .heroimg>img {
+        max-width: 445px;
+        max-height: 250px;
+        margin-right: 10px;
+    }
+
+
 }
