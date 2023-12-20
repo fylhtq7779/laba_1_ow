@@ -840,5 +840,40 @@ input:valid+button+.thanks-message {
         margin-right: 10px;
     }
 
+    .video {
+        margin-top: 145px;
+    }
+    
+    .video>img {
+        max-width: 616px;
+    }
+
+    .videoH1 {
+        position: absolute;
+        top: 64px;
+        color: #FFF;
+        font-family: Playfair Display;
+        font-size: 3.8rem;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 51px; /* 134.211% */
+    }
+    
+    .videoH2 {
+        position: absolute;
+        top: 120px;
+        color: #4BA87D;
+        text-align: center;
+        font-family: Raleway;
+        font-size: 1.3rem;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 15px; /* 115.385% */
+        letter-spacing: 0.65px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 17px;
+        padding-right: 17px;
+    }
 
 }
