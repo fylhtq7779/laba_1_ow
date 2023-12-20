@@ -217,8 +217,9 @@ li {
     background-repeat: no-repeat;
     z-index: -1;
     background-position: center 250px;
-    background-size: 100% 800px;
+    background-size: 100% auto; /* Увеличивается только ширина фона */
 }
+
 
 .customers {
     display: flex;
@@ -850,7 +851,7 @@ input:valid+button+.thanks-message {
 
     .videoH1 {
         position: absolute;
-        top: 64px;
+        top: 130px;
         color: #FFF;
         font-family: Playfair Display;
         font-size: 3.8rem;
@@ -861,7 +862,7 @@ input:valid+button+.thanks-message {
     
     .videoH2 {
         position: absolute;
-        top: 120px;
+        top: 230px;
         color: #4BA87D;
         text-align: center;
         font-family: Raleway;
