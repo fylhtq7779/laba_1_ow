@@ -25,6 +25,26 @@ input:required {
 }
 
 
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: #FF3D00;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+    } 
+
 
 html {
     box-sizing: border-box;
@@ -447,6 +467,132 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+
+.examples .loader::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit; /* Наследуем background от родительского элемента */
+    z-index: 2; /* Поверх содержимого */
+
+    /* Анимация исчезновения loader'а */
+    animation: hideLoader 3s forwards;
+    animation-delay: 2s; /* Задержка перед началом анимации исчезновения */
+}
+
+
+.examples .image-wrapper, .examples .examples_name, .examples .examples_since {
+    visibility: hidden;
+    animation: showContent 1s forwards;
+    animation-delay: 2s;
+}
+
+@keyframes hideLoader {
+    to {
+        visibility: hidden;
+    }
+}
+
+@keyframes showContent {
+    to {
+        visibility: visible;
+    }
+}
+
+/* Добавляем стили для расположения изображения и текста, если они ещё не определены */
+.examples .image-wrapper img {
+    width: 100%;
+    display: block;
+}
+
+/* Example wrapper positioning */
+.examples > div {
+    position: relative;
+    /* Определите любые дополнительные стили для карточек здесь, такие как padding, margins, и т.д. */
+}
+
+/* Существующие стили для .loader остаются без изменений */
+
+/* Стили карточек .examples > div */
+.examples > div {
+    position: relative;
+    /* Тут могут быть другие стили, относящиеся к карточкам */
+}
+
+/* Задаем начальные стили для содержимого, которое должно быть скрыто */
+.examples .image-wrapper,
+.examples .examples_name,
+.examples .examples_since {
+    visibility: hidden;
+}
+
+/* Включаем анимацию для самого loader, чтобы сделать его невидимым после отведенного времени */
+.loader {
+    /* Существующие стили loader */
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: #FF3D00;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite, hide 3s forwards;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+/* Анимация появления содержимого через 3 секунды */
+@keyframes showContent {
+    from {
+        visibility: hidden;
+    }
+    to {
+        visibility: visible;
+    }
+}
+
+/* Анимация для скрытия loader через 3 секунды */
+@keyframes hide {
+    0% {
+        visibility: visible;
+        opacity: 1;
+    }
+    99.99% {
+        visibility: visible;
+        opacity: 0;
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+/* Анимация содержимого начнется после окончания анимации loader */
+.examples .image-wrapper,
+.examples .examples_name,
+.examples .examples_since {
+    animation: showContent 0.5s forwards;
+    animation-delay: 3s; /* Задержка в 3 секунды */
 }
 
 
