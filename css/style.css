@@ -11,6 +11,20 @@
     color: inherit;
 }
 
+/* Стилизация текста для отмеченных радиокнопок и чекбоксов */
+input[type="radio"]:checked + label,
+input[type="checkbox"]:checked + label {
+  font-weight: bold;
+  color: #5f74ff;    /* Изменить цвет текста */
+}
+
+/* Стилизация полей, обязательных для заполнения */
+input:required {
+  box-shadow: 0 0 0 2px #ff3a3a;  /* Добавить красную тень вокруг поля */
+  background-color: #fff0f0;      /* Задать светло-красный фон поля */
+}
+
+
 
 html {
     box-sizing: border-box;
@@ -21,6 +35,82 @@ html {
 *:after {
     box-sizing: inherit;
 }
+
+/* Заменяем стандартное выделение текста на пользовательские цвета */
+::selection {
+    background: #4BA87D; /* Цвет фона для выделенного текста */
+    color: #000000; /* Цвет текста для выделенного текста */
+  }
+  
+  /* Для кроссбраузерности также включаем вендорный префикс для Firefox */
+  ::-moz-selection {
+    background: #4BA87D;
+    color: #000000;
+  }
+  
+
+  /* Стили для ссылок */
+a {
+    color: #000000; /* Исходный цвет ссылок */
+    text-decoration: none; /* Убрать подчеркивание у ссылок */
+    transition: transform 0.3s ease; /* Плавная анимация при наведении */
+  }
+  
+  a:hover,
+  a:focus { /* Добавляем :focus для удобства доступности */
+    transform: scale(1.1); /* Увеличить размер на 10% */
+  }
+  
+  /* Стили для кнопок */
+  button {
+    background-color: #4CAF50; /* Исходный фон кнопок */
+    color: white; /* Исходный цвет текста кнопок */
+    border: none; /* Убрать стандартные границы */
+    padding: 10px 20px; /* Отступы вокруг текста в кнопке */
+    cursor: pointer; /* Курсор в виде указателя */
+    outline: none; /* Убрать стандартную обводку при фокусировке */
+    transition: transform 0.3s ease; /* Плавная анимация при наведении */
+  }
+  
+  button:hover,
+  button:focus { /* Добавляем :focus для удобства доступности */
+    transform: scale(1.1); /* Увеличить размер на 10% */
+  }
+  
+
+  /* Стилизация текста-подсказки в элементах с классом .form */
+.form::placeholder {
+    color: #888888; /* Цвет текста-подсказки */
+    opacity: 1; /* Полная непрозрачность текста */
+    font-size: 1.5rem;
+    font-weight: 900; /* Нормальное начертание шрифта */
+  }
+  
+  /* Для поддержки разных браузеров, стоит добавить вендорные префиксы */
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #888888;
+    font-style: italic;
+    opacity: 1;
+  }
+  
+  :-moz-placeholder { /* Firefox 18- */
+    color: #888888;
+    font-style: italic;
+    opacity: 1;
+  }
+  
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: #888888;
+    font-style: italic;
+    opacity: 1;
+  }
+  
+  :-ms-input-placeholder { /* IE 10+ */
+    color: #888888;
+    font-style: italic;
+    opacity: 1;
+  }
+  
 
 ul {
     list-style: none;
@@ -629,6 +719,15 @@ input:valid+button+.thanks-message {
     margin-bottom: 1.5rem;
 }
 
+/* Стиль для логотипа в футере */
+.footer-logo {
+    /* Поворот на 30 градусов */
+    transform: rotate(30deg) scale(1.5) skew(20deg, 10deg);
+    /* Добавление перехода для плавности эффекта */
+    transition: transform 0.3s ease;
+  }
+  
+
 .form-label {
     display: block;
     margin-bottom: 0.5rem;
@@ -905,6 +1004,7 @@ input:valid+button+.thanks-message {
         flex-direction: row;
         justify-content: flex-start;
         margin-top: 32px;
+        margin-bottom: 35px;
         
     }
 
