@@ -68,6 +68,7 @@
 .item img{
     grid-column: -1/1;
     grid-row-start: 1;
+    max-width: 100%;
 }
 .item a{
     grid-column: -1/1;
